@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Market Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Stock Market Prediction</h1>
+        <p>Enter a stock symbol to get predictions:</p>
+        <input type="text" id="stockSymbol" placeholder="Enter Stock Symbol">
+        <button onclick="predictStock()">Predict</button>
+        <p id="predictionResult"></p>
+    </div>
+
+    <script>
+        function predictStock() {
+            const stockSymbol = document.getElementById("stockSymbol").value;
+            if (stockSymbol) {
+                document.getElementById("predictionResult").innerText = `Predicted trend for ${stockSymbol}: Upward 📈`;
+            } else {
+                document.getElementById("predictionResult").innerText = "Please enter a valid stock symbol.";
+            }
+        }
+    </script>
+</body>
+</html>
